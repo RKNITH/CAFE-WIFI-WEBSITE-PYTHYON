@@ -1,0 +1,7 @@
+<nav class="txt-ss">
+    <a href = "{{url_for('home')}}" class="{{ 'active' if path=='/' }}">Home</a>
+    {% if user_stat == "super-admin" or user_stat == "admin"%}
+        <a href = "{{url_for('insert_new')}}" class="{{ 'active' if path=='/insert-new-cafe' }}">Add Cafe</a>
+        <a class="btn" style="background-color: #f9c7a1; color: #200404" href = "{{url_for('logout')}}">Logout</a>
+    {% endif %}
+</nav>

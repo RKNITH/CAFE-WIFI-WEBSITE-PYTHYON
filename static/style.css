@@ -1,0 +1,350 @@
+/* UNIVERSAL STYLE */
+
+*{
+    box-sizing: border-box;
+    font-family: Helvetica, Geneva;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/* TEXT STYLES */
+
+.txt-para{
+    font-size: 18px;
+}
+
+.txt-bold{
+    font-weight: bolder;
+}
+
+.txt-heading{
+    font-weight: bolder;
+}
+
+.txt-xl{
+    font-size: 82px;
+}
+
+.txt-l{
+    font-size: 56px;
+}
+
+.txt-m{
+    font-size: 38px;
+}
+
+.txt-s{
+    font-size: 24px;
+}
+
+/* BUTTON STYLES */
+
+.btn{
+    background-color: #200404;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover{
+    color: #f9c7a1;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+i.fa-solid{
+    color: #200404;
+}
+
+/* BACKGROUND EFFECTS */
+
+header.home-page-header{
+    background-image: url('./images/bg_home_header.png');
+}
+
+main.table-area{
+    background-image: url("./images/bg_table.png");
+}
+
+.blog-area{
+    background-image: url("./images/bg_blog_area.png");
+}
+
+.login-form-area{
+    background-image: url("./images/bg_login_form.png");
+}
+
+.new-cafe-form-area{
+    background-image: url("./images/bg_new_cafe.png");
+}
+
+.cafe-details-area{
+    background-image: url("./images/bg_cafe_details.png");
+}
+
+.join-jury-area{
+    background-image: url("./images/joinjury-bg.jpg");
+}
+
+.dark-bg{
+    color: white;
+}
+
+.cover-screen{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-cover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.bg-dark-shadow{
+    background-color: rgba(0, 0, 0, 0.411);
+}
+
+.bg-white-shadow{
+    background-color: rgba(255, 255, 255, 0.516);
+    z-index: 0;
+}
+
+.content{
+    position: relative;
+    z-index: 100;
+    padding: 30px;
+}
+
+nav{
+    width: 100%;
+    background-color: #200404;
+    padding: 20px 30px;
+}
+
+nav > a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 5px;
+    margin-right: 10px;
+}
+
+/* Link Styles */
+
+a:hover{
+    color: #f9c7a1;
+}
+
+a.active{
+    color: #f9c7a1;
+}
+
+header > .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px 10px;
+    z-index: 1;
+    color: white;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.685);
+}
+
+/* CONTENTS */
+
+h1{
+    text-align: center;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4)
+}
+
+table{
+    width: 95%;
+    margin: auto;
+    text-align: left;
+    border-spacing: 0;
+}
+
+td, th{
+    border: 2px solid black;
+    padding: 10px 10px;
+}
+
+th{
+    color: white;
+    background-color: #200404;
+    font-weight: bold;
+}
+
+/* BLOG AREA */
+
+.blog-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    gap: 50px;
+    padding: 40px 0px;
+}
+
+.card{
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px 30px;
+    text-align: justify;
+    width: 300px;
+    box-shadow: 6px 6px 12px rgb(0, 0, 0, 0.4);
+}
+.card > h3{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* LOGIN FORM STYLES */
+
+.login-h{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+.login-form-box{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9c7a1;
+    border-radius: 6px;
+    box-shadow: 10px 10px 20px black;
+}
+
+.form-ele{
+    margin: 20px 0px;
+    display: block;
+}
+
+input{
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    padding: 8px 6px;
+}
+
+input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 6px solid #200404;
+}
+
+/* INSERT NEW CAFE FORM */
+
+.content > form.new-cafe,
+.content > .cafe-details{
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.content > form > .left,
+.content > form > .right,
+.content > .cafe-details > .left,
+.content > .cafe-details > .right{
+    width: 50%;
+}
+
+input[type="time"]{
+    width: auto;
+}
+
+.content > form > .right,
+.content > .cafe-details > right{
+    position: relative;
+}
+
+.content > form > .right > .upload{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content > .cafe-details > right{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > .cafe-details > .right img{
+    width: 300px;
+    height: auto;
+}
+
+#fileInput{
+    display: none;
+}
+
+.upload i{
+    font-size: 200px;
+}
+
+i:hover{
+    cursor: pointer;
+    color: #f9c7a1;
+}
+
+h1 > form{
+    display: inline;
+}
+
+/* JOIN THE JURY FORM */
+
+.joinjury-form-box{
+    background-color: #f9c7a1;
+    border-radius: 4px;
+    width: 600px;
+}
+
+textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    height: 400px;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+textarea:focus{
+    outline: none;
+    border: 2px solid #200404;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask WTF Form Example</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    {% include 'nav.html' %}
+    <main class="cover-screen join-jury-area">
+        <div class="bg-cover bg-white-shadow"></div>
+        <div class="content joinjury-form-box">
+            <form method="POST" action="/joinjury">
+                <h1 class="txt-l">Join the Jury</h1>
+                {{ form.csrf_token }}
+                {{ form.email.label(class="txt-s form-ele") }}
+                {{ form.email(class="form-ele txt-s") }}
+                {{ form.password.label(class="txt-s form-ele") }}
+                {{ form.password(class="txt-s form-ele") }}
+                {{ form.reason.label(class="txt-s form-ele") }}
+                {{ form.reason(class="txt-s form-ele") }}
+                {{ form.submit(class="btn txt-s") }}
+            </form>
+        </div>
+    </main>
+</body>
+</html>

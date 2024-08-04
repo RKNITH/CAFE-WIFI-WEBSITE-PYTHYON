@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cifi</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    {% include 'nav.html' %}
+    <header class="cover-screen home-page-header">
+        <div class="bg-cover bg-dark-shadow"></div>
+        <div class="content">
+            <h1 class="txt-heading txt-xl">Cifi</h1>
+            <p class="txt-m dark-bg">
+                Your goto website whenever you want to find a nice cafe near you.
+                <!-- Don't just believe what others say, upload your own preferences for others to see. -->
+            </p>
+            <a href="/joinjury" class="btn txt-s txt-bold">Join the Jury</a>
+        </div>
+    </header>
+    <main class="cover-screen table-area">
+        <div class="bg-cover bg-white-shadow"></div>
+        <div class="content">
+            {% if leng != 0 %}
+            <table class="txt-para" cellspacing="0">
+                <thead class="txt-s">
+                    <th>Name</th>
+                    <th>Opening Time</th>
+                    <th>Closing Time</th>
+                    <th>Coffee Rating</th>
+                    <th>Wifi Rating</th>
+                    <th>Toilet Rating</th>
+                    <th>Location</th>
+                </thead>
+                {% for cafe in cafes: %}
+                <tr>
+                    <td> <a href="/cafe/{{cafe.id}}">{{cafe.cafe_name}}</a> </td>
+                    <td> {{cafe.opening_time}} </td>
+                    <td> {{cafe.closing_time}} </td>
+                    <td> {{cafe.coffee_rating}} </td>
+                    <td> {{cafe.wifi_rating}} </td>
+                    <td> {{cafe.toilet_rating}} </td>
+                    <td> <a href="{{cafe.location}}">Location</a> </td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <h1 class="txt-l">No Data Entered Yet</h1>
+            {% endif %}
+        </div>
+    </main>
+
+    <div class="blog-area cover-screen">
+        <div class="bg-cover bg-white-shadow"></div>
+        <div class="content">
+            <h1 class="txt-l">Want to Know some Facts about Coffee?</h1>
+            <div class="blog-cards">
+                {% for fact in fact_list %}
+                    <div class="card">
+                        <h3 class="txt-s">{{fact.title}}</h3>
+                        <p class="txt-para">{{fact.para}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

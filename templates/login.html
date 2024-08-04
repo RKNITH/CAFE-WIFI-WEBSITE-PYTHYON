@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    {% include 'nav.html' %}
+    <div class="flash-msgs">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <p>{{ message }}</p>
+              {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <main class="cover-screen login-form-area">
+        <h1 class="login-h txt-l">Hello Master, Login Please</h1>
+        <div class="bg-cover bg-white-shadow"></div>
+        <div class="content login-form-box">
+            <form action="/login" method="POST">
+                {{ form.csrf_token }}
+                {{form.email.label(class="txt-s form-ele")}}
+                {{form.email(class="form-ele txt-s")}}
+                {{form.password.label(class="txt-s form-ele")}}
+                {{form.password(class="form-ele txt-s")}}
+                {{form.submit(class="btn txt-s")}}
+             </form>
+
+        </div>
+    </main>
+
+</body>
+</html>
